@@ -4,20 +4,36 @@ from django.shortcuts import render
 
 # Create your views here.
 def post_create(request):
-    return HttpResponse('<h1>Create</h1>')
+    context = {
+        'title': 'Create',
+    }
+    return render(request, "index.html", context)
 
 
 def post_detail(request):
-    return HttpResponse('<h1>Detail</h1>')
+    context = {
+        'title': 'Detail',
+    }
+    return render(request, "index.html", context)
 
 
 def post_list(request):
-    return render(request, "index.html", {})
+    context = {
+        'title': 'List',
+    }
+    return render(request, "index.html", context)
 
 
 def post_update(request):
-    return HttpResponse('<h1>Update</h1>')
+    context = {
+        'title': 'Update',
+    }
+    return render(request, "index.html", context)
 
 
 def post_delete(request):
-    return HttpResponse('<h1>Delete</h1>')
+    context = {
+        'title': 'Delete',
+    }
+    return render(request, "index.html", context)
+
