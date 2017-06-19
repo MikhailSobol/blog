@@ -1,0 +1,46 @@
+body {
+  background: #F2F2F2;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100vh;
+  background: white;
+  padding: 30px 0;
+  transition: 1s;
+  box-shadow: 0 0 2px 2px #CDCDCD;
+  float: left;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial;
+  font-weight: 500;
+  font-size: 23px;
+  text-transform: uppercase;
+  transition: .4s;
+}
+
+header:hover {
+  width: 135px;
+}
+
+.site-nav a:hover {
+  color: #7AC7CD;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0 10px 0 0;
+  text-align: right;
+  transition: .5s;
+}
+
+.site-nav ul li {
+  margin-bottom: 10px;
+}
