@@ -12,15 +12,31 @@
     margin: 0;
     border: none;
     background-size: cover;
-    background: url('../img/test-post-pic.jpg') left;
-    -webkit-transition:background-position 35s ease-in;
-    -moz-transition:background-position 35s ease-in;
-    -o-transition:background-position 35s ease-in;
-    transition:background-position 35s ease-in;
+    background: url('../img/post-background-test.jpg') left;
+    -webkit-transition:background 5s ease-in;
+    -moz-transition:background 5s ease-in;
+    -o-transition:background 5s ease-in;
+    transition:background 5s ease-in;
+    /*transition: 4s;*/
 }
 
 .posts-list-item:hover {
     background-position: right;
+    background:
+            linear-gradient(
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)
+            ),
+                /* bottom, image */
+            url(../img/post-background-test.jpg);
+}
+
+.posts-list-item:hover .posts-list-item-title {
+    opacity: 0.4;
+}
+
+.posts-list-item:hover .posts-list-item-read {
+    display: block;
 }
 
 .posts-list-item-title {
@@ -37,12 +53,42 @@
     text-align: center;
 }
 
+.posts-list-item-read {
+    background: rgba(0, 0, 0, 0.7);
+    width: 30%;
+    height: 50%;
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+    display: none;
+    transition: 1s;
+    color: white;
+    font-family: DejaVu Sans Mono, sans-serif;
+    font-size: 100px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 250px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.posts-list-item-read:hover {
+    opacity: 0.9;
+    text-decoration: none;
+    color: white;
+}
+
+.posts-list-item-read-a {
+    text-decoration: none;
+
+}
+
 .list-group .list-group-item:first-child {
-  border-top-right-radius: 0px !important;
-  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
 }
 
 .list-group .list-group-item:last-child {
-  border-bottom-right-radius: 0px !important;
-  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
