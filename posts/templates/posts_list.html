@@ -5,7 +5,7 @@
         {% for post in post_queryset %}
             <li class="list-group-item posts-list-item">
                 <div class="posts-list-item-title">{{ post.title }}</div>
-                <a class="posts-list-item-read" href="#">READ</a>
+                <a class="posts-list-item-read" href="{{ post.pk }}">READ</a>
             </li>
         {% endfor %}
     </ul>
