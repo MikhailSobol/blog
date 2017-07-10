@@ -9,9 +9,15 @@
 <div id="wrapper">
     {% include "header.html" %}
     <div id="page-content-wrapper">
-        {% include "sidebar_button.html" %}
-        {% block content %}
-        {% endblock content %}
+        <div class="row">
+            <div class="col-sm-11">
+                {% include "sidebar_button.html" %}
+            </div>
+            <div class="col-11 col-sm-11 col-md-11 col-lg-11 pull-right">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
     </div>
 </div>
 
