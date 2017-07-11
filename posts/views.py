@@ -32,7 +32,7 @@ def post_detail(request, id=None):
 def post_list(request):
     queryset = Post.objects.all()
     context = {
-        'post_queryset': queryset,
+        'post_queryset': reversed(queryset),
         'title': 'List',
     }
     return render(request, "posts_list.html", context)
