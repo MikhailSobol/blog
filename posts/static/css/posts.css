@@ -13,27 +13,26 @@
     border: none;
     background-size: cover;
     /*background: url() left;*/
-    -webkit-transition:background 5s ease-in;
-    -moz-transition:background 5s ease-in;
-    -o-transition:background 5s ease-in;
-    transition:background 5s ease-in;
+    -webkit-transition:background 10s ease-in;
+    -moz-transition:background 10s ease-in;
+    -o-transition:background 10s ease-in;
+    transition:background 10s ease-in;
     /*transition: 4s;*/
 }
 
 .posts-list-item:hover {
-    background: blue;!important;
+    /*background: blue;!important;*/
     /*background-position: right;*/
     /*background:*/
             /*linear-gradient(*/
                     /*rgba(0, 0, 0, 0.7),*/
                     /*rgba(0, 0, 0, 0.7)*/
             /*),*/
-                 /*bottom, image*/
-            /*url();*/
+                 /*bottom !important;*/
 }
 
 .posts-list-item:hover .posts-list-item-title {
-    opacity: 0.4;
+    /*opacity: 0.4;*/
 }
 
 .posts-list-item:hover .posts-list-item-read {
