@@ -5,9 +5,11 @@
 {% endblock title %}
 
 {% block content %}
-    {{ post.title }}
-    {{ post.content }}
-    {{ post.timestamp }}
-    {{ post.updated }}
-    {{ post.id }}
+    <div class="posts-list-item-title post-detail-title col-md-11 col-sm-11 col-xs-11 col-11 pull-right">
+        <ul>
+            <li class="post-detail-title-theme"><p id="post-theme">{{ post.theme }}</p></li>
+            <li class="post-detail-title-title">{{ post.title }}</li>
+            <li class="post-detail-title-date"><p id="post-date">{{ post.timestamp }}</p></li>
+        </ul>
+    </div>
 {% endblock content %}
