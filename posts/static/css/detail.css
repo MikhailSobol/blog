@@ -1,4 +1,4 @@
-.post-detail-title {
+.post-detail {
     margin-top: -65px;
     display: table-cell;
     background: rgba(0, 0, 0, 0.1);
@@ -6,7 +6,7 @@
     margin-right: 10px;
 }
 
-.post-detail-title-title {
+.post-detail-title {
     padding: 0;
     margin: 0;
     width: 50%;
@@ -14,14 +14,14 @@
     /*background: purple;*/
 }
 
-.post-detail-title ul {
+.post-detail ul {
     display: inline;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.post-detail-title ul li {
+.post-detail ul li {
     padding: 0;
     margin: 0;
     display: inline-block;
@@ -67,7 +67,35 @@
     padding-right: 10px;
 }
 
-.post-detail-title ul li:hover {
+.post-detail ul li:hover {
     background: rgba(0, 0, 0, 0.12);
     border: 1px solid black;
+}
+
+.parallax-image {
+    height: 700px;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.post-detail-content {
+    width: 80%;
+    /*background: green;*/
+    margin: 0 auto;
+    min-height: 500px;
+    font-size: 50px;
+    font-family: Josefin Slab, sans-serif;
+    text-align: left;
+}
+
+.post-detail-content-p::first-letter {
+    text-transform: uppercase;
+    font-size: 150px;
+    /*color: rgba(19, 18, 22, 0.91);*/
+    text-shadow: 5px 2px #000;
+    /*text-shadow: #1a1a1a;*/
+    /*font-family: Great Vibes, sans-serif;*/
 }
