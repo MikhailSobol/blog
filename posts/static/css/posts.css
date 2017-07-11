@@ -12,7 +12,7 @@
     margin: 0;
     border: none;
     background-size: cover;
-    background: url('../img/post-background-test.jpg') left;
+    /*background: url() left;*/
     -webkit-transition:background 5s ease-in;
     -moz-transition:background 5s ease-in;
     -o-transition:background 5s ease-in;
@@ -21,14 +21,15 @@
 }
 
 .posts-list-item:hover {
-    background-position: right;
-    background:
-            linear-gradient(
-                    rgba(0, 0, 0, 0.7),
-                    rgba(0, 0, 0, 0.7)
-            ),
-                /* bottom, image */
-            url(../img/post-background-test.jpg);
+    background: blue;!important;
+    /*background-position: right;*/
+    /*background:*/
+            /*linear-gradient(*/
+                    /*rgba(0, 0, 0, 0.7),*/
+                    /*rgba(0, 0, 0, 0.7)*/
+            /*),*/
+                 /*bottom, image*/
+            /*url();*/
 }
 
 .posts-list-item:hover .posts-list-item-title {

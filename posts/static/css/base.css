@@ -2,7 +2,8 @@ body {
     position: relative;
     overflow-x: hidden;
     /*background: #444240;*/
-    background: rgba(79, 77, 82, 0.91);
+    /*background: rgba(79, 77, 82, 0.91);*/
+    background: #323232;
 }
 body,
 html { height: 100%;}

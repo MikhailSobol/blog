@@ -6,11 +6,15 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/posts.css' %}"/>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+{#    console.log("hello");#}
+</script>
+
 <script>
     $(document).ready(function () {
         var trigger = $('.hamburger'),
@@ -39,5 +43,15 @@
         $('[data-toggle="offcanvas"]').click(function () {
             $('#wrapper').toggleClass('toggled');
         });
+        $(".posts-list-item").hover(function(){
+            $(this).css("background-position", "right");
+        }, function(){
+            $(this).css("background-position", "left");
+        });
     });
+{#    $().hover(function () {#}
+{#        console.log("hello");#}
+{#        $(this).css("background-position", "right");#}
+{#    })#}
+{#    console.log("hello");#}
 </script>
