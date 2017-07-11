@@ -83,6 +83,25 @@
 
 }
 
+.posts-list-item-date {
+    position: relative;
+    top: -35px;
+    color: white;
+    float: right;
+    font-family: DejaVu Sans Mono, sans-serif;
+    font-size: 15px;
+}
+
+.posts-list-item-theme {
+    position: relative;
+    top: -35px;
+    color: white;
+    float: left;
+    font-family: DejaVu Sans Mono, sans-serif;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
 .list-group .list-group-item:first-child {
   border-top-right-radius: 0 !important;
   border-top-left-radius: 0 !important;
