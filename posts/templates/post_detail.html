@@ -5,11 +5,20 @@
 {% endblock title %}
 
 {% block content %}
-    <div class="posts-list-item-title post-detail-title col-md-11 col-sm-11 col-xs-11 col-11 pull-right">
+    <div class="posts-list-item-title post-detail col-md-11 col-sm-11 col-xs-11 col-11 pull-right">
         <ul>
             <li class="post-detail-title-theme"><p id="post-theme">{{ post.theme }}</p></li>
-            <li class="post-detail-title-title">{{ post.title }}</li>
+            <li class="post-detail-title">{{ post.title }}</li>
             <li class="post-detail-title-date"><p id="post-date">{{ post.timestamp }}</p></li>
         </ul>
+
+        <div class="parallax-image" style="background-image: url({{ post.background.url }});"></div>
+
+{#        <div class="other" style="height: 1000px;"></div>#}
+        <hr style="width: 70%; margin-top: 30px; margin-bottom: 30px;">
+
+        <div class="post-detail-content">
+            <p class="post-detail-content-p">{{ post.content }}</p>
+        </div>
     </div>
 {% endblock content %}
