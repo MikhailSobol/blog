@@ -4,7 +4,7 @@
     <ul class="list-group posts-list">
         {% for post in post_queryset %}
             <li class="list-group-item posts-list-item"
-                style="background: url({{ post.background.url }}) left;">
+                style="background: url({{ post.background.url }}) left fixed no-repeat;">
                 <div class="posts-list-item-title">
                     {{ post.title }}
                 </div>
