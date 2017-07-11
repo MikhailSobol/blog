@@ -43,10 +43,19 @@
         $('[data-toggle="offcanvas"]').click(function () {
             $('#wrapper').toggleClass('toggled');
         });
-        $(".posts-list-item").hover(function(){
+        $(".posts-list-item").hover(function() {
+            var bg = $(this).css('background-image');
+            bg = bg.replace('url(','').replace(')','');
+            console.log(bg);
             $(this).css("background-position", "right");
-        }, function(){
-            $(this).css("background-position", "left");
+            $(this).css({background: 'linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(' + bg + ')'});
+        }, function() {
+            var bg = $(this).css('background-image');
+            bg = bg.substring(bg.lastIndexOf(' ', bg.length));
+            bg = bg.replace('url(','').replace(')','');
+            console.log(bg);
+{#            $(this).css("background-position", "left");#}
+            $(this).css("background", "url(" + bg + ") left");
         });
     });
 {#    $().hover(function () {#}
