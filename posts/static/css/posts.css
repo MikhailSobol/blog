@@ -13,7 +13,7 @@
     border: none;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     background-size: cover;
     -webkit-transition:background 10s ease-in;
     -moz-transition:background 10s ease-in;
