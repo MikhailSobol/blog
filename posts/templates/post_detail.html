@@ -11,6 +11,8 @@
 {% endblock styles %}
 
 {% block content %}
+{#    <div class="arrow array-left"></div>#}
+    <a href="{% url 'list' %}"><i class="arrow-left"></i></a>
     <div class="posts-list-item-title post-detail col-md-11 col-sm-11 col-xs-11 col-11 pull-right">
         <ul>
             <li class="post-detail-title-theme"><p id="post-theme">{{ post.theme }}</p></li>
@@ -26,6 +28,6 @@
         <div class="post-detail-content">
             <p class="post-detail-content-p">{{ post.content }}</p>
         </div>
-        {{ request. }}
+{#        {{ request. }}#}
     </div>
 {% endblock content %}
