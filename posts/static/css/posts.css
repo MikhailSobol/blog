@@ -1,11 +1,12 @@
 .posts-list {
-    padding-left: 50px;
+    /*padding-left: 50px;*/
     margin-top: -65px;
 }
 
 .posts-list-item {
-    width: 95.5%;
-    float: right;
+    /*width: 95.5%;*/
+    /*width: 100%;*/
+    /*float: none;*/
     height: 500px;
     box-shadow: -8px 30px 25px 1px rgba(0,0,0,0.95);
     padding: 0;
