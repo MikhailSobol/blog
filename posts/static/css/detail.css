@@ -108,3 +108,33 @@
     /*padding-bottom:0;*/
     /*font-family: Great Vibes, sans-serif;*/
 }
+
+i {
+    position: fixed;
+    left: 3%;
+    top: 10%;
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 10px 7px 0px -4px rgba(0,0,0,0.25);
+    /*box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 0px 0 rgba(0, 0, 0, 0.19);*/
+    /*box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);*/
+    transition: 1s;
+}
+
+i:hover {
+    box-shadow: 6px 6px 3px -3px rgba(0, 0, 0, 0.95);
+}
+
+i:active {
+    border: solid grey;
+    border-width: 0 10px 10px 0;
+}
+
+
+.arrow-left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
