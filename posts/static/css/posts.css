@@ -22,6 +22,10 @@
     transition:background 10s ease-in;
 }
 
+.posts-list-item:last-child {
+    margin-bottom: 50px;
+}
+
 .posts-list-item:hover .posts-list-item-read {
     display: block;
 }
