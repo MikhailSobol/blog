@@ -4,6 +4,12 @@
     {{ post.title }}
 {% endblock title %}
 
+{% block styles %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/posts.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}"/>
+{% endblock styles %}
+
 {% block content %}
     <div class="posts-list-item-title post-detail col-md-11 col-sm-11 col-xs-11 col-11 pull-right">
         <ul>
@@ -20,5 +26,6 @@
         <div class="post-detail-content">
             <p class="post-detail-content-p">{{ post.content }}</p>
         </div>
+        {{ request. }}
     </div>
 {% endblock content %}
