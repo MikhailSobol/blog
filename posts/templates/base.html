@@ -7,15 +7,14 @@
 </head>
 <body>
 <div id="wrapper">
-    {% include "header.html" %}
+{#    {% include "header.html" %}#}
     <div id="page-content-wrapper">
         <div class="row">
-            <div class="col-sm-11">
-                {% include "sidebar_button.html" %}
-            </div>
-            <div class="col-11 col-sm-11 col-md-11 col-lg-11 pull-right">
+            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-centered">
+                <div class="content-wrapper">
                 {% block content %}
                 {% endblock content %}
+                </div>
             </div>
         </div>
     </div>
