@@ -78,7 +78,7 @@
 }
 
 .parallax-image {
-    height: 700px;
+    height: 500px;
     background-attachment: fixed;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -87,12 +87,12 @@
 }
 
 .post-detail-content {
-    width: 80%;
+    width: 90%;
     /*background: green;*/
     margin: 0 auto;
     min-height: 500px;
     /*font-size: 50px;*/
-    font-size: 5vh;
+    font-size: 35px;
     font-family: Josefin Slab, sans-serif;
     text-align: left;
 }
@@ -103,6 +103,8 @@
     font-size: 20vh;
     /*color: rgba(19, 18, 22, 0.91);*/
     text-shadow: 5px 2px #000;
+    /*line-height:*/
     /*text-shadow: #1a1a1a;*/
+    /*padding-bottom:0;*/
     /*font-family: Great Vibes, sans-serif;*/
 }
