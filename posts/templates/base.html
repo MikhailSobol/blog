@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Blog{% endblock title %}</title>
-    {% include "styles_and_scripts_including.html" %}
+    {% include "necessary_includes.html" %}
+    {% block styles %}<style></style>{% endblock styles %}
 </head>
 <body>
 <div id="wrapper">
