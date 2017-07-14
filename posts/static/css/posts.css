@@ -32,12 +32,15 @@
     /*opacity: .5;*/
     width: 100%;
     height: 50px;
+    line-height: 50px;
     padding: 0;
     margin: 0;
     color: white;
-    font-size: 35px;
+    /*font-size: 35px;*/
+    font-size: 2vw;
     font-family: DejaVu Sans Mono, sans-serif;
     text-align: center;
+    vertical-align: middle;
 }
 
 .posts-list-item-read {
@@ -76,7 +79,8 @@
     color: white;
     float: right;
     font-family: DejaVu Sans Mono, sans-serif;
-    font-size: 15px;
+    /*font-size: 15px;*/
+    font-size: 1.2vw;
 }
 
 .posts-list-item-theme {
@@ -85,7 +89,8 @@
     color: white;
     float: left;
     font-family: DejaVu Sans Mono, sans-serif;
-    font-size: 15px;
+    /*font-size: 15px;*/
+    font-size: 1.2vw;
     padding-left: 20px;
 }
 
