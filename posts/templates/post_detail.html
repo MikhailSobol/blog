@@ -8,6 +8,12 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/posts.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}"/>
+
+    <script>
+        $(document).ready(function () {
+            $(".header-class").css("display", "none");
+        })
+    </script>
 {% endblock styles %}
 
 {% block content %}
