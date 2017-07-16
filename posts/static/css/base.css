@@ -321,6 +321,16 @@ html { height: 100%;}
 
 }
 
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-inverse .navbar-toggle {
+    background: transparent;
+    border: none;
+}
+
 #blog-navbar {
     color: white;
     font-size: 20px;!important;
@@ -328,4 +338,14 @@ html { height: 100%;}
 
 #blog-navbar ul:first-child {
     padding-left: 10%;
+}
+
+#blog-navbar ul li {
+    border: 1px solid transparent;
+    transition: .3s;
+}
+
+#blog-navbar ul li:hover {
+    background: rgba(0, 0, 0, 0.12);
+    border: 1px solid black;
 }
