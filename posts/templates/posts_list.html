@@ -25,17 +25,6 @@
                 {#            $(this).css("background-size", "cover");#}
             });
 
-            $(window).scroll(function () {
-                if ($(document).scrollTop() >= 250) {
-                    $(".up-arrow").removeClass("scroll-to-top-button-invisible");
-                } else {
-                    $(".up-arrow").addClass("scroll-to-top-button-invisible");
-                }
-            });
-            
-            $(".up-arrow").click(function () {
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-            })
         });
     </script>
 {% endblock styles %}
