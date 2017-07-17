@@ -7,7 +7,7 @@ from .forms import PostForm
 
 
 def post_create(request):
-    form = PostForm(request.POST or None)
+    form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         return _save_instance_and_redirect(form, request, 'Successfully Created')
     if form.errors:
@@ -24,6 +24,7 @@ def post_detail(request, slug=None):
     context = {
         'title': instance.title,
         'post': instance,
+        'request': request,
     }
     return render(request, "post_detail.html", context)
 
@@ -33,6 +34,7 @@ def post_list(request):
     context = {
         'post_queryset': reversed(queryset),
         'title': 'List',
+        'request': request,
     }
     return render(request, "posts_list.html", context)
 
