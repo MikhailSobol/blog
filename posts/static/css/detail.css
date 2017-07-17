@@ -3,6 +3,7 @@
     display: table-cell;
     background: rgba(0, 0, 0, 0.1);
     height: 75px;
+    /*font-size: 50px;*/
     /*margin-right: 10px;*/
 }
 
@@ -90,9 +91,9 @@
     width: 90%;
     /*background: green;*/
     margin: 0 auto;
-    min-height: 500px;
+    men-height: 500px;
     /*font-size: 50px;*/
-    font-size: 35px;
+    /*font-size: 35px;*/
     font-family: Josefin Slab, sans-serif;
     text-align: left;
 }
@@ -117,3 +118,20 @@
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
+
+/*h1 {*/
+    /*font-size: 200%;*/
+/*}*/
+/**/
+/*h2 {*/
+    /*font-size: 175%;*/
+/*}*/
+/**/
+/*h3 {*/
+    /*font-size: 150%;*/
+/*}*/
+/**/
+/*h4 {*/
+    /*font-size: 125%;*/
+/*}*/
+/**/
