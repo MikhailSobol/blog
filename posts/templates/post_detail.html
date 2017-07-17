@@ -16,10 +16,14 @@
     </script>
 {% endblock styles %}
 
+{% block buttons %}
+    <div class="container">
+        <i class="up-arrow scroll-to-top-button-invisible"></i>
+        <a href="{% url 'list' %}"><i class="arrow-left"></i></a>
+    </div>
+{% endblock buttons %}
+
 {% block content %}
-{#    <div class="arrow array-left"></div>#}
-    <i class="up-arrow scroll-to-top-button-invisible"></i>
-    <a href="{% url 'list' %}"><i class="arrow-left"></i></a>
     <div class="posts-list-item-title post-detail col-md-11 col-sm-11 col-xs-11 col-11 pull-right">
         <ul>
             <li class="post-detail-title-theme"><p id="post-theme">{{ post.theme }}</p></li>
@@ -29,12 +33,10 @@
 
         <div class="parallax-image" style="background-image: url({{ post.background.url }});"></div>
 
-{#        <div class="other" style="height: 1000px;"></div>#}
         <hr style="width: 70%; margin-top: 30px; margin-bottom: 30px;">
 
         <div class="post-detail-content">
-            <p class="post-detail-content-p">{{ post.content }}</p>
+            <p class="post-detail-content-p">{{ post.content|safe }}</p>
         </div>
-{#        {{ request. }}#}
     </div>
 {% endblock content %}
