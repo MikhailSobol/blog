@@ -91,7 +91,7 @@
     width: 90%;
     /*background: green;*/
     margin: 0 auto;
-    men-height: 500px;
+    min-height: 500px;
     /*font-size: 50px;*/
     /*font-size: 35px;*/
     font-family: Josefin Slab, sans-serif;
