@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pagedown',
+    'home',
     'posts',
 ]
 
@@ -55,7 +57,9 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                 os.path.join(BASE_DIR + '/home/', 'templates'),
+                 os.path.join(BASE_DIR + '/posts/', 'templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -118,8 +122,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR + '/home/', "static"),
+    os.path.join(BASE_DIR + '/posts/', "static"),
+]
 
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media-cdn')
