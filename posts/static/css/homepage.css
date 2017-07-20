@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:500,700');
 
-
 .navbar-inverse {
   font-weight: 800;
   font-size: 14px;
@@ -48,7 +47,7 @@
 }
 
 .navbar-inverse .navbar-brand {
-  font-family: Above DEMO;
+  font-family: Roboto;
   font-size: 42px;
   font-weight: bolder;
   transition: .5s;
@@ -85,20 +84,20 @@
 }
 
 .header-wrapper {
-  height: 500px;
+  height: 600px;
   background-attachment: fixed;
   background-position: top;
   background-size: cover; 
 }
 
 .header-text-wrapper {
-  height: 500px;
+  height: 600px;
   background: transparent;
   text-align: center;
 }
 
 .header-text-wrapper h1 {
-  margin-top: 120px;
+  margin-top: 180px;
   font-size: 70px;
   font-family: Raleway;
   font-weight: 700;
@@ -120,8 +119,8 @@
   padding: 0;
   margin: 0;
   opacity: 0;
-  transform: translateY(5px);
-  transition: all 2s ease-in-out;
+  transform: translateY(20px);
+  transition: all .8s ease-in-out;
 }
 
 .about-section-logo {
