@@ -6,6 +6,10 @@ from .models import Post
 from .forms import PostForm
 
 
+def homepage(request):
+    return render(request, 'homepage.html', {})
+
+
 def post_create(request):
     form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
