@@ -3,6 +3,12 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:500,700');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700');
 
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .navbar-inverse {
   font-weight: 800;
   font-size: 14px;
@@ -26,9 +32,21 @@
   color: black;
 }
 
-.navbar-inverse .navbar-nav>.active > a:hover {
+.navbar-inverse .navbar-nav >.active > a:hover {
   background: transparent;
+  color: black;!important;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
   color: black;
+}
+
+.navbar-inverse-background-transparent .navbar-nav>.active>a,
+.navbar-inverse-background-transparent .navbar-nav>.active>a:focus,
+.navbar-inverse-background-transparent .navbar-nav>.active>a:hover {
+  color: #ccc; !important;
 }
 
 .navbar-inverse .navbar-nav > li {
@@ -66,7 +84,6 @@
 .navbar-inverse-background-transparent .navbar-nav > .active > a:hover {
   color: white;
 }
-
 .navbar-inverse-background-transparent .navbar-nav > li > a {
   /*color: #cccccc;*/
   color:white;
@@ -74,6 +91,37 @@
 
 .navbar-inverse-background-transparent .navbar-nav > li > a:hover {
   color: #cccccc;
+}
+
+.navbar-inverse-background-transparent .navbar-nav > li:hover {
+  /*color: #cccccc;*/
+  /*color:white;*/
+  background: transparent;
+}
+
+
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: black;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #5d5d5e;
+}
+.navbar-inverse-background-transparent .navbar-nav > li > a:hover {
+    /*color: #fff;*/
+    /*background-color: transparent;*/
+    color: #ccc;!important;
+}
+
+.navbar-inverse-background-transparent .navbar-nav > li > a:focus {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  background: transparent;
 }
 
 .navbar-inverse-background-transparent .navbar-brand {
@@ -193,10 +241,12 @@
   background-attachment: fixed;
   background-position: top center;
   background-size: cover;
-}
+/*  padding: 0;
+  margin: 0;
+*/}
 
 .posts-text-wrapper {
-  height: 500px;
+  height: 100%;
   text-align: center;
   color: white;
 }
@@ -248,3 +298,11 @@
     transform: translateY(0px);
   }
 }
+
+
+/*.navbar-default .navbar-nav > .active > a, */
+/*.navbar-default .navbar-nav > .active > a:hover, */
+/*.navbar-default .navbar-nav > .active > a:focus {*/
+    /*color: #8a0e0b;*/
+    /*background-color: transparent;*/
+/*}*/
