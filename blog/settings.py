@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pagedown',
-    'home',
     'posts',
 ]
 
@@ -128,9 +127,9 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR + '/home/', "static"),
-    os.path.join(BASE_DIR + '/posts/', "static"),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR + '/home/', "static"),
+#     os.path.join(BASE_DIR + '/posts/', "static"),
+# ]
 
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media-cdn')
