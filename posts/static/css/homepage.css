@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:500,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700');
 
 .navbar-inverse {
   font-weight: 800;
@@ -140,12 +141,6 @@
   background: #01A6F6;
 }
 
-.is-showing {
-  /*display: block;*/
-  opacity: 1;
-  transform: translateY(0px);
-}
-
 .about-section p {
     font-family: Roboto;
     font-size: 18px;
@@ -153,6 +148,44 @@
     color: white;
     padding: 30px 10px 100px 10px;
     margin: 0;
+}
+
+.why-wrapper {
+  background: transparent;
+  /*border-bottom: 1px solid black;*/
+}
+
+.why-section {
+  height: 500px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all .8s ease-in-out;
+}
+
+.why-wrapper-why h1 {
+  font-size: 190px;
+  font-family: Source Sans Pro;
+  line-height: 500px;
+  color: black;
+  vertical-align: middle; 
+  padding: 0;
+  margin: 0;
+}
+
+.why-text-wrapper {
+  height: 500px;
+  font-size: 30px;
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.is-showing {
+  /*display: block;*/
+  opacity: 1;!important;
+  transform: translateY(0px);
 }
 
 @media screen and (max-width: 768px) {
@@ -167,9 +200,9 @@
     transform: translateY(5px);
     transition: all 2s ease-in-out;
   }
-.is-showing {
-  /*display: block;*/
-  opacity: 1;
-  transform: translateY(0px);
-}
+
+  .is-showing {
+    opacity: 1;!important;
+    transform: translateY(0px);
+  }
 }
