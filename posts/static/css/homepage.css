@@ -188,6 +188,48 @@
   transform: translateY(0px);
 }
 
+.posts-wrapper {
+  height: 500px;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+}
+
+.posts-text-wrapper {
+  height: 500px;
+  text-align: center;
+  color: white;
+}
+
+.posts-text-wrapper h1 {
+  font-size: 70px;
+  font-family: Raleway;
+  font-weight: 700;
+  padding-top: 100px;
+
+}
+
+.posts-text-wrapper h2 {
+  display: block;
+  font-size: 35px;
+  width: 340px;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  margin: 0 auto;
+  /*margin-top: 40px;*/
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, .5);
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.posts-text-wrapper h2:hover, 
+.posts-text-wrapper h2:focus {
+  background-color: rgba(0, 0, 0, .8);
+}
+
 @media screen and (max-width: 768px) {
   .about-section {
     height: 400px;
