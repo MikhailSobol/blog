@@ -68,7 +68,27 @@
     </div>
   </div>
 
-  <div style="height: 1000px;"></div>
+  <div class="why-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-md-3
+        col-lg-offset-1 col-md-offset-1 why-wrapper-why why-section">
+          <h1>WHY?</h1>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-lg-offset-2 col-md-offset-2 why-text-wrapper why-section">
+          <p>
+            There so many blogs already, so why creating another one?
+            Because it is a great thing for beginners to create.
+            While creating it, I used so many different technologies 
+            and learned so many interesting things like Django &amp Bootstrap
+            as mentioned above.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock content %}
 
 
@@ -79,34 +99,42 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
-      $(document).ready(function () {
-          $(window).scroll(function() {
-              var scroll = $(this).scrollTop();
+    $(document).ready(function () {
+      $(window).scroll(function() {
+        var scroll = $(this).scrollTop();
 
-              if (scroll > 140) {
-                  $(".navbar-inverse")
-                      .removeClass("navbar-inverse-background-transparent");
-              }
+        if (scroll > 140) {
+          $(".navbar-inverse")
+          .removeClass("navbar-inverse-background-transparent");
+        }
 
-              if (scroll < 300) {
-                  $(".navbar-inverse")
-                      .addClass("navbar-inverse-background-transparent");
-              }
+        if (scroll < 300) {
+          $(".navbar-inverse")
+          .addClass("navbar-inverse-background-transparent");
+        }
 
-              if (scroll < 300) {
-                  $(".header-text-wrapper").css({
-                      "transform": "translate(0px, " + scroll / 8 + "%)"
-                  });
-              }
-
-              if (scroll > $(".about-wrapper").offset().top - 500) {
-                  $(".about-section").each(function(i) {
-                      setTimeout(function() {
-                          $(".about-section").eq(i).addClass("is-showing");
-                      }, 15 * (i + 1));
-                  })
-              }
+        if (scroll < 300) {
+          $(".header-text-wrapper").css({
+            "transform": "translate(0px, " + scroll / 8 + "%)"
           });
+        }
+
+        if (scroll > $(".about-wrapper").offset().top - 600) {
+          $(".about-section").each(function(i) {
+            setTimeout(function() {
+              $(".about-section").eq(i).addClass("is-showing");
+            }, 15 * (i + 1));
+          })
+        }
+
+        if (scroll > $(".why-section").offset().top - 400) {
+          $(".why-section").each(function(i) {
+            setTimeout(function() {
+              $(".why-section").eq(i).addClass("is-showing");
+            }, 15 * (i + 1));
+          })
+        }
       });
+    });
   </script>
 {% endblock scripts %}
