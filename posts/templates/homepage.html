@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %}BLOG | Homepage{% endblock %}
+{% block styles %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+{% endblock styles %}
+
+{% block content %}
+  <div class="navbar navbar-inverse navbar-fixed-top navbar-inverse-background-transparent navbar-inverse-border-transparent">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-id">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">BLOG</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse-id">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Why?</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-wrapper" style="background-image:
+          linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)),
+          url({% static 'img/working-desk.jpg' %})">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 header-text-wrapper">
+          <h1>Another Blog</h1>
+          <h2>Home Page</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-wrapper">
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-lg-4 col-md-4 about-section bootstrap-section">
+          <img class="about-section-logo" src="{% static 'img/logos/bootstrap.png' %}" height="200px">
+          <p>While designing this blog, bootstrap framework was used very frequently.
+            All pages you can find on this website use it.</p>
+        </div>
+
+        <div class="col-lg-4 col-md-4 about-section django-section">
+          <img class="about-section-logo" src="{% static 'img/logos/django.png' %}" height="200px">
+          <p>Just like Bootstrap used for design, Python &amp Django were used
+            to create backend of this website.</p>
+        </div>
+
+        <div class="col-lg-4 col-md-4 about-section curiosity-section">
+          <img class="about-section-logo" src="{% static 'img/logos/curiosity.png' %}"  height="200px">
+          <p>Both Django &amp Bootstrap were used because of my curiosity on using them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 1000px;"></div>
+{% endblock content %}
+
+
+{% block scripts %}
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $(window).scroll(function() {
+              var scroll = $(this).scrollTop();
+
+              if (scroll > 140) {
+                  $(".navbar-inverse")
+                      .removeClass("navbar-inverse-background-transparent");
+              }
+
+              if (scroll < 300) {
+                  $(".navbar-inverse")
+                      .addClass("navbar-inverse-background-transparent");
+              }
+
+              if (scroll < 300) {
+                  $(".header-text-wrapper").css({
+                      "transform": "translate(0px, " + scroll / 8 + "%)"
+                  });
+              }
+
+              if (scroll > $(".about-wrapper").offset().top - 500) {
+                  $(".about-section").each(function(i) {
+                      setTimeout(function() {
+                          $(".about-section").eq(i).addClass("is-showing");
+                      }, 15 * (i + 1));
+                  })
+              }
+          });
+      });
+  </script>
+{% endblock scripts %}
