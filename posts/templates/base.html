@@ -1,32 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Blog{% endblock title %}</title>
-    {% include "necessary_includes.html" %}
-    {% block styles %}<style></style>{% endblock styles %}
+  <meta charset="UTF-8">
+  <title>{% block title %}Blog{% endblock title %}</title>
+  {% block styles %}
+  {% endblock styles %}
 </head>
 <body>
-<div id="wrapper">
-    {% block buttons %}
-    {% endblock buttons %}
+  {% block content %}
+  {% endblock content %}
 
-    <div class="row">
-        {% include "header.html" %}
-    </div>
-    <div class="container-fluid">
-    <div id="page-content-wrapper">
-        <div class="row">
-            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-centered">
-                <div class="content-wrapper">
-                {% block content %}
-                {% endblock content %}
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
-
+  {% block scripts %}
+  {% endblock scripts %}
 </body>
 </html>
