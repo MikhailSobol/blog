@@ -11,10 +11,12 @@
     
     <div class="collapse navbar-collapse" id="navbar-collapse-id">
       <ul class="nav navbar-nav navbar-right">
+      {% block navbar-list-content %}
         <li class="active home-scroll"><a href="#">Home</a></li>
         <li class="about-scroll"><a href="#">About</a></li>
         <li class="why-scroll"><a href="#">Why?</a></li>
         <li class="posts-scroll"><a href="#">Posts</a></li>
+      {% endblock navbar-list-content %}
       </ul>
     </div>
   </div>
