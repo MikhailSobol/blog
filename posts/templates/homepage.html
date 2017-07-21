@@ -66,19 +66,20 @@
   </div>
 
   <div class="posts-wrapper" style="
-  background-image: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),
-   url({% static 'img/header-bg-2.jpg' %}">
+  background-image: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+   url({% static 'img/header-bg.jpg' %}">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
           <div class="posts-text-wrapper">
             <h1>Interested?</h1>
-            <h2>Check out blog itseft</h2>
+            <h2><a href="{% url 'list' %}">Go To Posts</a></h2>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 
 {% endblock content %}
 
