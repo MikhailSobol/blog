@@ -9,4 +9,42 @@ body {
 .item {
   height: 550px;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.carousel-read-button {
+  display: block;
+  color: #333;
+  border-radius: 3px;
+  width: 130px;
+  height: 45px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 45px;
+  vertical-align: middle;
+  font-size: 30px;
+  font-family: Roboto;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .4);
+  background: rgba(242, 245, 247, 1);
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.carousel-read-button:hover {
+  text-underline-position: none;
+  box-shadow: 0 15px 20px 5px rgba(0, 0, 0, .25);
+  transform: translateY(-5px);
+  transform: scale(1.1);
+}
+
+.carousel-caption a {
+  text-decoration: none;
+}
+
+.carousel-caption h3 {
+  font-size: 50px;
+  font-family: Roboto;
+  text-transform: capitalize;
+  margin-bottom: 230px;
 }
