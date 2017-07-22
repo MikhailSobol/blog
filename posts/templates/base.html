@@ -12,6 +12,8 @@
 
   {% block styles %}
   {% endblock styles %}
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
 </head>
 <body>
   {% block content %}
@@ -25,6 +27,7 @@
 
   {% load staticfiles %}
   <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
 
   {% block scripts %}
   {% endblock scripts %}
