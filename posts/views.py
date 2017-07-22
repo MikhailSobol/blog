@@ -37,7 +37,7 @@ def post_detail(request, slug=None):
 def post_list(request):
     queryset_list = Post.objects.all()
     most_read = queryset_list[:3]
-    paginator = Paginator(queryset_list, 3)
+    paginator = Paginator(queryset_list, 9)
 
     page = request.GET.get('page')
 
