@@ -65,7 +65,8 @@ body {
 }
 
 .post {
-  min-height: 500px;
+  /*position: relative;*/
+  min-height: 300px;
   background: white;
   border-radius: 5px;
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .2);
@@ -172,6 +173,18 @@ body {
   text-align: center;
   color: #333;
   font-size: 19px;
+  margin-bottom: 40px;
+}
+
+.post-footer {
+  /*border-bottom-left-radius: 5px;*/
+  /*border-bottom-right-radius: 5px;*/
+  background: white;
+  height: 70px;
+  margin: 0 auto;
+  /*margin-top: 50px;*/
+  width: 100%;
+
 }
 
 @media screen and (max-width: 767px) {
