@@ -35,8 +35,10 @@ def post_detail(request, slug=None):
 
 def post_list(request):
     queryset = Post.objects.all()
+    most_read = queryset[:3]
     context = {
         'post_queryset': reversed(queryset),
+        'most_read': most_read,
         'title': 'List',
         'request': request,
     }
