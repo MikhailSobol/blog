@@ -70,7 +70,11 @@ body {
   /*box-shadow: 0 10px 20px 0 #e0e0e0;*/
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .2);
   transform: translateY(0);
-  transition: all .3s ease-in-out;
+  transition: opacity .8s ease-in-out, transform .3s ease-in-out, box-shadow .3s;
+  /*transition: all .8s ease-in-out;*/
+  opacity: 0;
+  /*transition: all .8s ease-in-out;*/
+  overflow: hidden;
 }
 
 .post:hover {
@@ -80,12 +84,63 @@ body {
   transform: scale(1.1);
 }
 
+.post-header-wrapper {
+  width: 100%;
+  height: 35%;
+  overflow: hidden;
+}
+
 .post-header {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  width: 100%;
-  height: 35%;
+  transform: scale(1);
+  transition: all .3s ease-in-out;
+}
+
+.post-header:hover {
+  transform: scale(1.2);
+}
+
+.pagination {
+  text-align: center;
+  margin: 0 auto;
+  background: #333;  
+  height: 50px;
+  background: white;
+  box-shadow: 0 3px 20px 3px rgba(0, 0, 0, .1);
+  transform: translateY(0);
+  margin-top: 100px;
+  transition: all .3s ease-in-out;
+}
+
+.pagination:hover {
+  box-shadow: 0 6px 20px 3px rgba(0, 0, 0, .15);
+  transform: translateY(-10px);
+  transform: scale(1.1);
+}
+
+.pagination a {
+  line-height: 50px;
+  vertical-align: middle;
+  color: #ccc;
+  transition: .2s;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.pagination a:hover {
+  font-size: 25px;
+  color: grey;
+}
+
+.current {
+  line-height: 50px;
+  vertical-align: middle;
+  color: #333;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
