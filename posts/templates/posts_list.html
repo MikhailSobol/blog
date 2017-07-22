@@ -27,6 +27,7 @@
             <img src="{{ post.background.url }}" alt="{{ post.title }}">
             <div class="carousel-caption">
               <h3>{{ post.title }}</h3>
+              <p class="carousel-post-description">{{ post.description }}</p>
               <a href="#"><p class="carousel-read-button">READ</p></a>
             </div>
           </div>
@@ -56,10 +57,16 @@
     <div class="post-wrapper">
       <div class="post">
         <div class="post-header-wrapper">
-          <div class="post-header" style="background-image: url({{ post.background.url }}"></div>
+          <div class="post-header" style="background-image: url({{ post.background.url }}">
+          </div>
         </div>
-        <div class="post-title-wrapper">
-          <a href="#"><h1 class="post-title">{{ post.title }}</h1></a>
+        <a href="#"><h1 class="post-title">{{ post.title }}</h1></a>
+        <div class="post-description-wrapper">
+          <p class="post-description">
+            {{ post.description }}
+            {{ post.description }}
+            {{ post.description }}
+          </p>
         </div>
       </div>
     </div>
