@@ -46,7 +46,14 @@ body {
   font-size: 50px;
   font-family: Roboto;
   text-transform: capitalize;
-  margin-bottom: 230px;
+  /*margin-bottom: 100px;*/
+}
+
+.carousel-post-description {
+  padding-top: 20px;
+  height: 150px;
+  font-size: 30px;
+  overflow: hidden;
 }
 
 .posts-wrapper {
@@ -58,22 +65,13 @@ body {
 }
 
 .post {
-  /*padding: 10px 5px 0 5px;*/
-  /*margin-left:;*/
-  /*padding-left: 100px;*/
-  /*padding-right: 100px;*/
-
-  height: 500px;
+  min-height: 500px;
   background: white;
   border-radius: 5px;
-  /*background: green;*/
-  /*box-shadow: 0 10px 20px 0 #e0e0e0;*/
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .2);
   transform: translateY(0);
   transition: opacity .8s ease-in-out, transform .3s ease-in-out, box-shadow .3s;
-  /*transition: all .8s ease-in-out;*/
   opacity: 0;
-  /*transition: all .8s ease-in-out;*/
   overflow: hidden;
 }
 
@@ -86,7 +84,8 @@ body {
 
 .post-header-wrapper {
   width: 100%;
-  height: 35%;
+  /*height: 35%;*/
+  height: 200px;
   overflow: hidden;
 }
 
@@ -162,8 +161,17 @@ body {
   text-decoration: underline;
 }
 
-.post-title-wrapper {
-  max-height: 1%;
+.post-description-wrapper {
+  /*background: green;*/
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.post-description {
+  text-align: center;
+  color: #333;
+  font-size: 19px;
 }
 
 @media screen and (max-width: 767px) {
