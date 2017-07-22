@@ -1,0 +1,6 @@
+.is-showing {
+  /*display: block;*/
+  opacity: 1;!important;
+  transform: translateY(0px);
+}
+
