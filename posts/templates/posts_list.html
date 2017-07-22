@@ -51,58 +51,61 @@
   <div class="container">
     <div class="row masonry" data-columns>
       {% for post in post_queryset %}
-      <!-- {% if forloop.counter0|divisibleby:3 %} -->
-    <!-- </div><div class="row"> -->
-    <!-- {% endif %} -->
-    <div class="post-wrapper">
-      <div class="post">
-        <div class="post-header-wrapper">
-          <div class="post-header" style="background-image: url({{ post.background.url }}">
+      <div class="post-wrapper">
+        <div class="post">
+          <div class="post-header-wrapper">
+            <div class="post-header" style="background-image: url({{ post.background.url }}">
+            </div>
           </div>
+          <a href="#"><h1 class="post-title">{{ post.title }}</h1></a>
+          <div class="post-description-wrapper">
+            <p class="post-description">
+              {{ post.description }}
+            </p>
+          </div>
+            <div class="row post-footer panel-footer">
+              <div class="col-lg-6 post-footer-author">
+                <h4>author</h4>
+              </div>
+              <div class="col-lg-6 post-footer-views">
+              <h3>as;lkdjf</h3>
+              </div>
+            </div>
         </div>
-        <a href="#"><h1 class="post-title">{{ post.title }}</h1></a>
-        <div class="post-description-wrapper">
-          <p class="post-description">
-            {{ post.description }}
-            {{ post.description }}
-            {{ post.description }}
-          </p>
+      </div>
+
+      <!-- </div> -->
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-8 text-center pagination">
+        <span class="step-links">
+          <div class="row">
+            <div class="col-lg-3">
+              {% if post_queryset.has_previous %}
+
+              <a class="glyphicon glyphicon-chevron-left"href="?page={{ post_queryset.previous_page_number }}"></a>
+              {% endif %}
+            </div>
+            <div class="col-lg-6">
+              <span class="current">
+                Page {{ post_queryset.number }} of {{ post_queryset.paginator.num_pages }}
+              </span>
+            </div>
+
+            <div class="col-lg-3">
+              {% if post_queryset.has_next %}
+              <a class="glyphicon glyphicon-chevron-right" href="?page={{ post_queryset.next_page_number }}"></a>
+              {% endif %}
+            </div>
+          </span>
         </div>
       </div>
     </div>
-
-    <!-- </div> -->
-    {% endfor %}
   </div>
-</div>
-<div class="container">
-  <div class="row">
-
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-8 text-center pagination">
-      <span class="step-links">
-        <div class="row">
-        <div class="col-lg-3">
-        {% if post_queryset.has_previous %}
-          
-        <a class="glyphicon glyphicon-chevron-left"href="?page={{ post_queryset.previous_page_number }}"></a>
-        {% endif %}
-        </div>
-        <div class="col-lg-6">
-          <span class="current">
-            Page {{ post_queryset.number }} of {{ post_queryset.paginator.num_pages }}
-          </span>
-        </div>
-
-        <div class="col-lg-3">
-        {% if post_queryset.has_next %}
-        <a class="glyphicon glyphicon-chevron-right" href="?page={{ post_queryset.next_page_number }}"></a>
-        {% endif %}
-        </div>
-      </span>
-    </div>
-  </div>
-</div>
-</div>
 </div>
 </div>
 
