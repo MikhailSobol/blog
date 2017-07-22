@@ -7,6 +7,7 @@ from django.utils.text import slugify
 class Post(models.Model):
     title = models.CharField(max_length=128)
     content = models.TextField()
+    description = models.TextField()
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
     theme = models.CharField(max_length=64, default='Test')
