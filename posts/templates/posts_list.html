@@ -48,15 +48,18 @@
 
 <div class="posts-wrapper">
   <div class="container">
-    <div class="row">
+    <div class="row masonry" data-columns>
       {% for post in post_queryset %}
-      {% if forloop.counter0|divisibleby:3 %}
-    </div><div class="row">
-    {% endif %}
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 post-wrapper">
+      <!-- {% if forloop.counter0|divisibleby:3 %} -->
+    <!-- </div><div class="row"> -->
+    <!-- {% endif %} -->
+    <div class="post-wrapper">
       <div class="post">
         <div class="post-header-wrapper">
           <div class="post-header" style="background-image: url({{ post.background.url }}"></div>
+        </div>
+        <div class="post-title-wrapper">
+          <a href="#"><h1 class="post-title">{{ post.title }}</h1></a>
         </div>
       </div>
     </div>
@@ -96,10 +99,11 @@
 </div>
 </div>
 
-<div style="height: 1000px"></div>
+<!-- <div style="height: 1000px"></div> -->
 
 {% endblock content %}
 
 {% block scripts %}
 <script type="text/javascript" src="{% static 'js/posts_list.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/salvattore.min.js'%}"></script>
 {% endblock scripts %}
