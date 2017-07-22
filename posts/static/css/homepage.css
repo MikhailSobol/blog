@@ -101,12 +101,6 @@ body {
   align-items: center; 
 }
 
-.is-showing {
-  /*display: block;*/
-  opacity: 1;!important;
-  transform: translateY(0px);
-}
-
 .posts-wrapper {
   height: 500px;
   background-attachment: fixed;
