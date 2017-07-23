@@ -28,7 +28,7 @@
             <div class="carousel-caption">
               <h3>{{ post.title }}</h3>
               <p class="carousel-post-description">{{ post.description }}</p>
-              <a href="#"><p class="carousel-read-button">READ</p></a>
+              <a href="{{ post.get_absolute_url }}"><p class="carousel-read-button">READ</p></a>
             </div>
           </div>
           {% endfor %}
