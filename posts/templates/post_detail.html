@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+  {% load staticfiles %}  
+  <link rel="stylesheet" type="text/css" 
+  href="{% static 'css/post_detail.css' %}">
+{% endblock styles %}
+
+{% block content %}
+  {% include 'post_detail_navbar.html' %}
+
+  <div class="header-wrapper" style="background-image: url({{ post.background.url }})">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-9 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 header-text-wrapper">
+          <h1 class="header-title">{{ post.title }}</h1>
+          <p class="header-description">{{ post.description }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 header-author">
+          <img class="img-circle header-author-image pull-left" src="{{ post.author.profile_image.url }}">
+          <h2 class="header-author-name pull-left">{{ post.author.get_full_name }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
