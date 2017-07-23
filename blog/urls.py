@@ -18,11 +18,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 
 from blog import settings
-from posts.views import homepage
+from posts.views import HomePageView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', homepage, name='home'),
+    url(r'^$', HomePageView.as_view(), name='home'),
     url(r'^posts/', include('posts.urls')),
 ]
 
