@@ -23,7 +23,6 @@ function move_text_with_scroll($scroll) {
 
 function make_class_active_with_scroll($scroll, $class, $to_be_active) {
   if ($scroll >= $($class).offset().top - 250) {
-    console.log('asdf');
     make_active($to_be_active);
   }
 }
