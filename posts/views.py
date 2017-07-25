@@ -11,18 +11,19 @@ from .forms import PostForm
 class HomePageView(View):
     def get(self, request):
         return render(request, 'homepage.html', {})
+        
 
-# def post_create(request):
-    # form = PostForm(request.POST or None, request.FILES or None)
-    # if form.is_valid():
-        # return _save_instance_and_redirect(form, request, 'Successfully Created')
-    # if form.errors:
-        # messages.error(request, 'Not Successfully Created')
+class PostCreateView(View):
+    def get(self, request):
+        return render(render, 'post_form.html', {
+                'form': PostForm(request.POST or None, request.Files or None)
+            })
 
-    # context = {
-        # 'form': form,
-    # }
-    # return render(request, "post_form.html", context)
+    def post(self, request):
+        form = PostForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            return _save_instance_and_redirect(form, request, '')
+
 
 class PostDetailView(View):
     def get(self, request, slug=None):
