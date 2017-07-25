@@ -1,0 +1,46 @@
+.header-wrapper {
+	height: 500px;
+	background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
+	 url('https://static1.squarespace.com/static/54c0f933e4b00653d31cb12c/54c1c355e4b09b3245ee14a7/54c1c358e4b0a94b97b9ff91/1421984602302/Typewriter.jpg?format=2500w');
+	background-size: cover;
+	background-position: bottom;
+	background-attachment: fixed;
+}
+
+.header-text-wrapper h1 {
+	font-size: 80px;
+	font-family: Open Sans;
+	font-weight: 700;
+	color: white;
+	text-align: center;
+	margin-top: 150px;
+}
+
+.header-text-wrapper h3 {
+	font-size: 50px;
+	font-family: Open Sans;
+	color: white;
+	text-align: center;
+}
+
+.form-wrapper {
+	color: #333;
+	font-family: Open Sans;
+}
+
+.wmd-wrapper {
+}
+
+.wmd-panel {
+	margin: 0 auto;!important;
+  min-width: 500px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.wmd-button-row {
+  height: 20px;
+  margin: 0 auto;
+  margin-bottom: 14px;
+  text-align: center;
+}
