@@ -1,0 +1,6 @@
+{% extends 'navbar.html' %}
+
+{% block navbar-list-content %}
+	<li class="active home-scroll"><a href="#">Home</a></li>
+	<li class="about-scroll"><a href="{% url 'list' %}">Posts</a></li>
+{% endblock navbar-list-content %}
