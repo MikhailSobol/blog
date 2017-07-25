@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pagedown',
     'userprofile',
     'posts',
+    'markdown_deux',
 ]
 
 MIDDLEWARE = [
