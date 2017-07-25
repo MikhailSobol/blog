@@ -2,6 +2,7 @@
 
 {% block styles %}
   {% load staticfiles %}  
+  {% load markdown_deux_tags %}
   <link rel="stylesheet" type="text/css" 
   href="{% static 'css/post_detail.css' %}">
 {% endblock styles %}
@@ -30,7 +31,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 post-content-wrapper">
-          <p class="post-content">{{ post.content|safe }}</p>
+          <p class="post-content">{{ post.content|markdown }}</p>
         </div>
       </div>
     </div> 
